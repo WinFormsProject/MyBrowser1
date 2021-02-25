@@ -1,18 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MyBrowser1
 {
     public partial class Form1 : Form
     {
-        Database1Entities db = new Database1Entities();
+        public Database1Entities db = new Database1Entities();
         public Form1()
         {
             InitializeComponent();
@@ -131,16 +126,33 @@ namespace MyBrowser1
         {
             
             CategoriesEditor editor = new CategoriesEditor();
-            var category = db.Categories.Where(c => c.Name == editor.CategoryName).FirstOrDefault();
-            if(category != null)
-            {
-                db.Categories.Remove(category);
-                db.SaveChanges();
-            }
-            editor.ButtonName = "ADD CATEGORY";
+            editor.ButtonName = "DELETE CATEGORY";
             if (editor.ShowDialog() == DialogResult.OK)
             {
+                var category = db.Categories.Where(c => c.Name == editor.CategoryName).FirstOrDefault();
+                if (category != null)
+                {
+                    db.Categories.Remove(category);
+                    db.SaveChanges();
+                    MessageBox.Show("Category succesfully deleted", "Message",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadCategories();
+                }
+            }
+        }
 
+        private void addSite_Click(object sender, EventArgs e)
+        {
+            SitesEditor editor = new SitesEditor(comboBox1);
+            editor.ButtonName = "ADD SITE";
+            editor.Database1 = db;
+            if (editor.ShowDialog() == DialogResult.OK)
+            {
+                db = editor.Database1;
+                db.SaveChanges();
+                MessageBox.Show("Site succesfully added", "Message",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LoadCategories();
             }
         }
     }

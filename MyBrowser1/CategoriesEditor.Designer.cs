@@ -49,13 +49,13 @@ namespace MyBrowser1
             // 
             this.categoryName.Location = new System.Drawing.Point(51, 113);
             this.categoryName.Name = "categoryName";
-            this.categoryName.Size = new System.Drawing.Size(718, 24);
+            this.categoryName.Size = new System.Drawing.Size(545, 24);
             this.categoryName.TabIndex = 1;
             // 
             // actionButton
             // 
             this.actionButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.actionButton.Location = new System.Drawing.Point(173, 200);
+            this.actionButton.Location = new System.Drawing.Point(97, 197);
             this.actionButton.Name = "actionButton";
             this.actionButton.Size = new System.Drawing.Size(454, 68);
             this.actionButton.TabIndex = 2;
@@ -67,7 +67,7 @@ namespace MyBrowser1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(900, 506);
+            this.ClientSize = new System.Drawing.Size(639, 322);
             this.Controls.Add(this.actionButton);
             this.Controls.Add(this.categoryName);
             this.Controls.Add(this.label1);

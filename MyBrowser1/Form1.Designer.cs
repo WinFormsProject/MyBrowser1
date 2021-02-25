@@ -81,14 +81,14 @@ namespace MyBrowser1
             // addCategory
             // 
             this.addCategory.Name = "addCategory";
-            this.addCategory.Size = new System.Drawing.Size(224, 26);
+            this.addCategory.Size = new System.Drawing.Size(200, 26);
             this.addCategory.Text = "&Add Category";
             this.addCategory.Click += new System.EventHandler(this.addCategory_Click);
             // 
             // delCategory
             // 
             this.delCategory.Name = "delCategory";
-            this.delCategory.Size = new System.Drawing.Size(224, 26);
+            this.delCategory.Size = new System.Drawing.Size(200, 26);
             this.delCategory.Text = "&Delete Category";
             this.delCategory.Click += new System.EventHandler(this.delCategory_Click);
             // 
@@ -105,14 +105,15 @@ namespace MyBrowser1
             // 
             this.addSite.Name = "addSite";
             this.addSite.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.A)));
-            this.addSite.Size = new System.Drawing.Size(214, 26);
+            this.addSite.Size = new System.Drawing.Size(224, 26);
             this.addSite.Text = "&Add Site";
+            this.addSite.Click += new System.EventHandler(this.addSite_Click);
             // 
             // delSite
             // 
             this.delSite.Name = "delSite";
             this.delSite.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.D)));
-            this.delSite.Size = new System.Drawing.Size(214, 26);
+            this.delSite.Size = new System.Drawing.Size(224, 26);
             this.delSite.Text = "&Delete Site";
             // 
             // pagesToolStripMenuItem

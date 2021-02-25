@@ -105,6 +105,12 @@
     <Compile Include="Sites.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="SitesEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SitesEditor.Designer.cs">
+      <DependentUpon>SitesEditor.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CategoriesEditor.resx">
       <DependentUpon>CategoriesEditor.cs</DependentUpon>
     </EmbeddedResource>
@@ -120,6 +126,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SitesEditor.resx">
+      <DependentUpon>SitesEditor.cs</DependentUpon>
+    </EmbeddedResource>
     <EntityDeploy Include="Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
